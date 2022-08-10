@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<nav>
+    <div id="img"></div>
+    <div id="name"></div>
+    <a href="/">Home</a>
+    <a href="/logout">logout</a>
+</nav><hr>
+
+<p name="chatBox" id="chatBox" style="width: 400px; height: 400px; border: 1px solid black;" ></p>
+
+<form id="messageForm">
+    <% if (userType == 'true') { %>
+        <input type="text" name="replyTo" id="replyEmail" placeholder="reply to (email)">
+    <% } %>
+    <input type="text" name="sendBox" id="sendBox">
+    <input type="submit" value="Send">
+</form>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
+<script src="../js/chat.js"></script>

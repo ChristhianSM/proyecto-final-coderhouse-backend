@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<nav>
+    <div id="img"></div>
+    <div id="name"></div>
+    <a href="/logout">logout</a>
+    <a href="/api/chat">Chat</a>
+</nav><hr>
+
+<% if (user.isAdmin == 'true') { %>
+    <div>
+        <p>Admin</p>
+        <p>Add products</p>
+        <form id="addForm">
+            <input type="text">
+        </form>
+    </div><hr>
+<% } %>
+
+<div style="display: flex;">
+    <div id="productContainer"></div>
+    <div style="border: 1px solid black; width: 300px; padding: 10px; margin-top: 1rem;">
+        <h1 style="text-align: center;">Shopping Cart</h1>
+        <div id="cartContainer">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
+<script src="../js/home.js"></script>
